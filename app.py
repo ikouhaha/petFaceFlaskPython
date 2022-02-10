@@ -2,7 +2,7 @@
 Run a rest API exposing the yolov5s object detection model
 """
 import argparse
-import io
+
 from warnings import catch_warnings
 
 import torch
@@ -11,13 +11,15 @@ from PIL import Image
 import cv2
 import numpy as np
 import json
+import io
 
 app = Flask(__name__)
 
-DETECTION_URL = "/pet_face_detect"
+@app.route("/")
+def hello():
+    return "home page"
 
-
-@app.route(DETECTION_URL, methods=["POST"])
+@app.route("/pet_face_detect", methods=["POST"])
 def predict():
     
     response = {}
