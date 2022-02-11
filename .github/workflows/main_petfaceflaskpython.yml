@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'petFaceFlaskPython'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_0524FEA648584788A94D0EF5EE5B926A }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_FD01AAB795A24904B7B0DFC5EA17C9CE }}
