@@ -4,12 +4,9 @@ Run a rest API exposing the yolov5s object detection model
 import argparse
 
 from warnings import catch_warnings
-
 import torch
 from flask import Flask, request
 from PIL import Image
-import cv2
-import numpy as np
 import json
 import io
 
