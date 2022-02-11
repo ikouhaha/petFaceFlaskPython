@@ -24,6 +24,7 @@ def predict():
     
     response = {}
     try:
+        model = torch.hub.load('ikouhaha/pet_face_yolov5','custom', path='best.pt', force_reload=True)  # force_reload to recache
         if not request.method == "POST":
             return
 
@@ -44,10 +45,10 @@ def predict():
     return response
 
 
-if __name__ == "__main__":
+#if __name__ == "__main__":
     #parser = argparse.ArgumentParser(description="Flask API exposing YOLOv5 model")
     #parser.add_argument("--port", default=5000, type=int, help="port number")
     #args = parser.parse_args()
 
-    model = torch.hub.load('ikouhaha/pet_face_yolov5','custom', path='best.pt', force_reload=True)  # force_reload to recache
+    #model = torch.hub.load('ikouhaha/pet_face_yolov5','custom', path='best.pt', force_reload=True)  # force_reload to recache
     #app.run(port=args.port)  # debug=True causes Restarting with stat
