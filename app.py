@@ -24,7 +24,7 @@ def predict():
     
     response = {}
     try:
-        model = torch.hub.load('ikouhaha/pet_face_yolov5','custom', path='best.pt', force_reload=True)  # force_reload to recache
+        
         if not request.method == "POST":
             return
 
